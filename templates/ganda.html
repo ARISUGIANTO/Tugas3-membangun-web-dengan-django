@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/vendor/css/style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #87CEFA;
+}
+
+.wrapper {
+    display: flex;
+}
+
+
+.wrapper  .text {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+
+
+}
+
+.wrapper .dynamic-text {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+
+}
+
+.dynamic-text li {
+    list-style: none;
+    color: #ffc711;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.dynamic-text li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+
+}
+
+.dynamic-text li span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 78px;
+    width: 100%;
+    background:#87CEFA;
+    border-left:2px solid #ffffff;
+    animation: typing 3s steps(14) infinite;
+
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left:0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class=" wrapper">
+        <div class="text">Don't forget</div>
+        <ul class="dynamic-text">
+            <li><span>Berdo'a</span></li>
+            <li><span>Berikhtiar</span></li>
+            <li><span>Belajar</span></li>
+            <li><span>Istiqomah</span></li>
+        </ul>
+    </div>
+
+</body>
+</html>
